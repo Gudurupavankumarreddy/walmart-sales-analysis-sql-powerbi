@@ -99,3 +99,26 @@ The following production-style SQL logic was implemented:
 
 ## 📁 Repository Structure
 
+walmart-sales-analysis-sql-powerbi/
+├── data/
+│ ├── walmart_raw.csv
+│ ├── vw_yearly_sales.csv
+│ ├── vw_monthly_seasonality.csv
+│ └── vw_store_performance.csv
+│
+├── sql/
+│ ├── walmart_schema.sql
+│ ├── walmart_analysis_queries.sql
+│ └── walmart_views.sql
+│
+├── powerbi/
+│ └── walmart_sales_dashboard.pbix
+│
+├── notebook/
+│ └── walmart_data_validation.ipynb
+│
+├── images/
+│ └── dashboard_preview.png
+│
+└── README.md
+
