@@ -33,7 +33,7 @@ All **core business logic, aggregations, and analytics are performed using SQL**
 - Converted date fields for time-based analysis
 - Ensured data quality before analytics
 
-> Python was used only for validation and understanding, following industry best practices.
+### Python was used only for validation and understanding, following industry best practices.
 
 ---
 
@@ -48,7 +48,7 @@ All **core business logic, aggregations, and analytics are performed using SQL**
   - Store ranking using **window functions**
 - Created reusable **SQL views** as a semantic layer for reporting
 
-> SQL served as the **primary analytics engine** for this project.
+### SQL served as the **primary analytics engine** for this project.
 
 ---
 
@@ -86,7 +86,7 @@ The following production-style SQL logic was implemented:
   - Top 10 Stores by Total Sales
   - Store Performance Ranking table
 
-> Power BI was used strictly as a **visualization and presentation layer**.
+### Power BI was used strictly as a **visualization and presentation layer**.
 
 ---
 
