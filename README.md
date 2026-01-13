@@ -1,4 +1,4 @@
-# Walmart Sales Analysis – SQL & Power BI
+<img width="1351" height="241" alt="image" src="https://github.com/user-attachments/assets/d298da1e-1352-4e2a-becd-6faa1e220b95" /># Walmart Sales Analysis – SQL & Power BI
 
 ## 📌 Project Overview
 This project presents an **end-to-end data analytics solution** built on Walmart’s historical weekly sales data.  
@@ -97,7 +97,7 @@ The following production-style SQL logic was implemented:
 
 ---
 
-## 📁 Repository Structure
+
 
 walmart-sales-analysis-sql-powerbi/
 ├── data/
