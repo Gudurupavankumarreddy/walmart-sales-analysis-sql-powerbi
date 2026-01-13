@@ -79,6 +79,7 @@ The core business logic and aggregations are performed using **SQL**, while **Po
 
 ## 📁 Repository Structure
 
+walmart-sales-analysis-sql-powerbi/
 ├── data/
 │ ├── walmart_raw.csv
 │ ├── vw_yearly_sales.csv
