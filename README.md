@@ -4,7 +4,7 @@
 This project presents an **end-to-end data analytics solution** built on Walmart’s historical weekly sales data.  
 The analysis focuses on understanding **sales trends, seasonality, holiday impact, and store-level performance** using an **industry-style workflow**.
 
-The core business logic and aggregations are performed using **SQL**, while **Power BI** is used exclusively for visualization and reporting.
+All **core business logic, aggregations, and analytics are performed using SQL**, while **Power BI** is used exclusively for visualization and reporting.
 
 ---
 
@@ -40,17 +40,34 @@ The core business logic and aggregations are performed using **SQL**, while **Po
 - Designed relational schema in MySQL
 - Loaded cleaned data into the database
 - Performed all **business aggregations using SQL**, including:
-  - Yearly and monthly sales trends
-  - Holiday vs non-holiday sales analysis
-  - Store ranking using window functions
+  - Yearly sales trend analysis
+  - Monthly sales seasonality analysis
+  - Holiday vs non-holiday sales comparison
+  - Store-wise revenue aggregation
+  - Store ranking using **window functions**
 - Created reusable **SQL views** as a semantic layer for reporting
 
-> SQL served as the primary analytics engine for this project.
+> SQL served as the **primary analytics engine** for this project.
 
 ---
 
-### 3️⃣ Data Export for Reporting
-- Exported SQL views as CSV files
+### 3️⃣ SQL Queries Implemented
+The following production-style SQL logic was implemented:
+
+- Yearly total sales aggregation using `GROUP BY YEAR(Date)`
+- Monthly seasonality analysis using `GROUP BY MONTH(Date)`
+- Holiday vs non-holiday sales comparison using conditional aggregation
+- Store ranking using `RANK() OVER (ORDER BY SUM(Weekly_Sales) DESC)`
+- Store-wise holiday lift calculation
+- Reusable reporting views:
+  - `vw_yearly_sales`
+  - `vw_monthly_seasonality`
+  - `vw_store_performance`
+
+---
+
+### 4️⃣ Data Export for Reporting
+- SQL views were exported as CSV files
 - This approach ensures:
   - Portability of the dataset
   - Lightweight Power BI model
@@ -58,16 +75,17 @@ The core business logic and aggregations are performed using **SQL**, while **Po
 
 ---
 
-### 4️⃣ Visualization (Power BI)
+### 5️⃣ Visualization (Power BI)
 - Imported SQL-generated CSV views into Power BI
 - Built an executive-level Power BI dashboard featuring business KPIs and insights including:
-  - Total Sales & Average Weekly Sales KPIs
+  - Total Sales KPI
+  - Average Weekly Sales KPI
   - Yearly Sales Trend (2010–2012)
   - Monthly Sales Seasonality
   - Top 10 Stores by Total Sales
   - Store Performance Ranking table
 
-> Power BI was used strictly as a visualization and presentation layer.
+> Power BI was used strictly as a **visualization and presentation layer**.
 
 ---
 
@@ -77,41 +95,7 @@ The core business logic and aggregations are performed using **SQL**, while **Po
 - Top 10 stores contribute a significant share of total revenue
 - Holiday weeks generate approximately **8% higher average sales** than non-holiday weeks
 
-## 📁 Repository Structure
-
-walmart-sales-analysis-sql-powerbi/
-├── data/
-│ ├── walmart_raw.csv
-│ ├── vw_yearly_sales.csv
-│ ├── vw_monthly_seasonality.csv
-│ └── vw_store_performance.csv
-│
-├── sql/
-│ ├── walmart_schema.sql
-│ ├── walmart_analysis_queries.sql
-│ └── walmart_views.sql
-│
-├── powerbi/
-│ └── walmart_sales_dashboard.pbix
-│
-├── notebook/
-│ └── walmart_data_validation.ipynb
-│
-├── images/
-│ └── dashboard_preview.png
-│
-└── README.md
-
-
 ---
 
-## ✅ Key Takeaway
-This project demonstrates a **production-style analytics workflow** where:
-- **SQL handles all core aggregations and business logic**
-- **Power BI focuses on insight delivery and storytelling**
-- Python is used only where appropriate for data validation
-
-This approach closely reflects how data analytics solutions are built in real-world business environments.
-
-
+## 📁 Repository Structure
 
